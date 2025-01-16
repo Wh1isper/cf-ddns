@@ -165,7 +165,7 @@ def ddns_refresh(v6_address):
 
 def get_v6_address_from_web():
     try:
-        r = httpx.get("http://api-ipv6.ip.sb")
+        r = httpx.get("https://api-ipv6.ip.sb")
         r.raise_for_status()
     except Exception as e:
         logger.exception(e)
