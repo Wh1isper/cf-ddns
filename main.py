@@ -74,7 +74,7 @@ def delete_cloudflare_record(record_id):
 
         return True
 
-    except httpx.RequestException as e:
+    except Exception as e:
         logger.error(f"Error deleting Cloudflare DNS record: {e}")
         return False
 
@@ -118,7 +118,7 @@ def create_cloudflare_record(v6_address):
 
         return True
 
-    except httpx.RequestException as e:
+    except Exception as e:
         logger.error(f"Error creating Cloudflare DNS record: {e}")
         return False
 
